@@ -1,0 +1,13 @@
+<div *ngIf="product.title" class="card"  > 
+  <!-- if title is there or only if title is present then show below code -->
+  <img [src]="product.ImageUrl" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{product.title}}</h5>
+    <p class="card-text">{{product.price}}</p>
+    <div class="card-footer" *ngIf="showActions">
+        <button class="btn btn-primary btn-block"  (click)="addtoCart(product)">Add to Cart</button>
+        <!-- *ngIf="showActions" ie show it only if showActions is true -->
+       <div></div>
+      </div>
+  </div>
+</div>
